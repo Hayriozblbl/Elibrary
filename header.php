@@ -21,7 +21,7 @@ $hakkimizdacek=$hakkimizdasor->fetch(PDO::FETCH_ASSOC);
 
 <base href="http://localhost/elib/">
 <!DOCTYPE html>
-<html lang="zxx">
+<html lang="En">
     
 
 <head>        
