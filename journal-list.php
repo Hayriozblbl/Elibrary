@@ -32,10 +32,19 @@ $dergisor->execute();
             <div class="books-media-list">
                 <div class="container">
                     <div class="row">
-                       <?php include'search.php'; ?>
+
+                                      <section class="search-filters">
+                                    <div class="container">
+                                        <div class="filter-box">
+                                            <h3>What are you looking for at the library?</h3>
+                                   
+                                        </div>
+                                    </div>
+                                </section>
+                            
                    </div>
                    <div class="row">
-                    <div class="col-md-9 col-md-push-3">
+                    <div class="col-md-9 col-md-9">
                         <div class="filter-options margin-list">
                             <div class="row">                                            
 
@@ -162,7 +171,7 @@ $dergisor->execute();
                 
             </nav>
         </div>
-      <?php include"sidebar.php"; ?> 
+     <?php //include"sidebar.php"; ?> 
     </div>
 </div>
 
@@ -174,58 +183,6 @@ $dergisor->execute();
 <!-- End: Books & Media Section -->
 
 <!-- Start: Social Network -->
-<section class="social-network section-padding">
-    <div class="container">
-        <div class="center-content">
-            <h2 class="section-title">Follow Us</h2>
-            <span class="underline center"></span>
-            <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        </div>
-        <ul>
-            <li>
-                <a class="facebook" href="#" target="_blank">
-                    <span>
-                        <i class="fa fa-facebook-f"></i>
-                    </span>
-                </a>
-            </li>
-            <li>
-                <a class="twitter" href="#" target="_blank">
-                    <span>
-                        <i class="fa fa-twitter"></i>
-                    </span>
-                </a>
-            </li>
-            <li>
-                <a class="google" href="#" target="_blank">
-                    <span>
-                        <i class="fa fa-google-plus"></i>
-                    </span>
-                </a>
-            </li>
-            <li>
-                <a class="rss" href="#" target="_blank">
-                    <span>
-                        <i class="fa fa-rss"></i>
-                    </span>
-                </a>
-            </li>
-            <li>
-                <a class="linkedin" href="#" target="_blank">
-                    <span>
-                        <i class="fa fa-linkedin"></i>
-                    </span>
-                </a>
-            </li>
-            <li>
-                <a class="youtube" href="#" target="_blank">
-                    <span>
-                        <i class="fa fa-youtube"></i>
-                    </span>
-                </a>
-            </li>
-        </ul>
-    </div>
-</section>
+<br> <br><br>
 <!-- End: Social Network -->
 <?php include"footer.php"; ?>

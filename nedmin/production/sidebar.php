@@ -14,7 +14,7 @@
             <li><a href="genel-ayar.php">Genel Ayarlar</a></li>
             <li><a href="iletisim-ayar.php">İletişim Ayarlar </a></li>
             <li><a href="api-ayar.php">Api Ayarları</a></li>
-            <li><a href="sosyal-ayar.php">Sosyal Medya Ayarları</a></li>
+         <!--     <li><a href="sosyal-ayar.php">Sosyal Medya Ayarları</a></li> -->
             <li><a href="mail-ayar.php">Mail Ayarları</a></li>
 
           </ul>
@@ -27,7 +27,7 @@
 
          <li><a href="referans.php"><i class="fa fa-code-fork"></i> R.İ.P İşlemleri<span class="label label-success pull-right"></span></a></li>
  -->
-         <li><a href="menu.php"><i class="fa fa-list"></i> Menü İşlemleri<span class="label label-success pull-right"></span></a></li>
+         <!--<li><a href="menu.php"><i class="fa fa-list"></i> Menü İşlemleri<span class="label label-success pull-right"></span></a></li>-->
 
 
          <li><a href="icerik.php"><i class="fa fa-comments-o"></i> Konferans<span class="label label-success pull-right"></span></a></li>

@@ -497,50 +497,49 @@ if (isset($_POST['icerikduzenle'])) {
 		$refimgyol=substr($uploads_dir, 6)."/".$benzersizad.$name;
 		@move_uploaded_file($tmp_name, "$uploads_dir/$benzersizad$name");
 
+
 		$tarih=$_POST['icerik_tarih'];
 		$saat=$_POST['icerik_saat'];
 		$zaman = $tarih." ".$saat;
 
 
 		$kaydet=$db->prepare("UPDATE icerik SET
-			icerik_ad=:ad,
-			icerik_detay=:detay,
-			icerik_keyword=:keyword,
-			icerik_durum=:durum,
-			icerik_resimyol=:resimyol,
-			icerik_konusmacilar=:konusmacilar,
-			icerik_katilim=:katilim,
-			icerik_duzenleyen=:duzenleyen,
-			icerik_bastarih=:bastarih,
-			icerik_bittarih=:bittarih,
-			icerik_otarih=:otarih,
-			icerik_yer=:yer,
-			icerik_komite=:komite,
-			icerik_konular=:konular,
-			icerik_ozel=:ozel,
-			icerik_surec=:surec,
-			icerik_mail=:mail,
-			icerik_zaman=:zaman
+		icerik_ad=:ad,
+		icerik_detay=:detay,
+		icerik_konusmacilar=:konusmacilar,
+		icerik_katilim=:katilim,
+		icerik_duzenleyen=:duzenleyen,
+		icerik_bastarih=:bastarih,
+		icerik_bittarih=:bittarih,
+		icerik_otarih=:otarih,
+		icerik_yer=:yer,
+		icerik_komite=:komite,
+		icerik_konular=:konular,
+		icerik_ozel=:ozel,
+		icerik_surec=:surec,
+		icerik_keyword=:keyword,
+		icerik_durum=:durum,
+		icerik_resimyol=:resimyol,
+		icerik_zaman=:zaman
 			WHERE icerik_id={$_POST['icerik_id']}");
 		$update=$kaydet->execute(array(
 			'ad' => $_POST['icerik_ad'],
-			'detay' => $_POST['icerik_detay'],
-			'keyword' => $_POST['icerik_keyword'],
-			'durum' => $_POST['icerik_durum'],
-			'katilim' => $_POST['icerik_katilim'],
-			'konusmacilar' => $_POST['icerik_konusmacilar'],
-			'düzenleyen' => $_POST['icerik_duzenleyen'],
-			'bastarih' => $_POST['icerik_bastarih'],
-			'bittarih' => $_POST['icerik_bittarih'],
-			'otarih' => $_POST['icerik_otarih'],
-			'yer' => $_POST['icerik_yer'],
-			'komite' => $_POST['icerik_komite'],
-			'konular' => $_POST['icerik_konular'],
-			'ozel' => $_POST['icerik_ozel'],
-			'surec' => $_POST['icerik_surec'],
-			'mail' => $_POST['icerik_mail'],
-			'resimyol' => $refimgyol,
-			'zaman' => $zaman
+		'detay' => $_POST['icerik_detay'],
+		'konusmacilar' => $_POST['icerik_konusmacilar'],
+		'katilim' => $_POST['icerik_katilim'],
+		'duzenleyen' => $_POST['icerik_duzenleyen'],
+		'bastarih' => $_POST['icerik_bastarih'],
+		'bittarih' => $_POST['icerik_bittarih'],
+		'otarih' => $_POST['icerik_otarih'],
+		'yer' => $_POST['icerik_yer'],
+		'komite' => $_POST['icerik_komite'],
+		'konular' => $_POST['icerik_konular'],
+		'ozel' => $_POST['icerik_ozel'],
+		'surec' => $_POST['icerik_surec'],
+		'keyword' => $_POST['icerik_keyword'],
+		'durum' => $_POST['icerik_durum'],
+		'resimyol' => $refimgyol,
+		'zaman' => $zaman
 		));
 
 
@@ -575,31 +574,29 @@ if (isset($_POST['icerikduzenle'])) {
 
 		$kaydet=$db->prepare("UPDATE icerik SET
 			icerik_ad=:ad,
-			icerik_detay=:detay,
-			icerik_keyword=:keyword,
-			icerik_konusmacilar=:konusmacilar,
-			icerik_katilim=:katilim,
-			icerik_duzenleyen=:duzenleyen,
-			icerik_bastarih=:bastarih,
-			icerik_bittarih=:bittarih,
-			icerik_otarih=:otarih,
-			icerik_yer=:yer,
-			icerik_komite=:komite,
-			icerik_konular=:konular,
-			icerik_ozel=:ozel,
-			icerik_surec=:surec,
-			icerik_mail=:mail,
-			icerik_durum=:durum,
-			icerik_zaman=:zaman
+		icerik_detay=:detay,
+		icerik_konusmacilar=:konusmacilar,
+		icerik_katilim=:katilim,
+		icerik_duzenleyen=:duzenleyen,
+		icerik_bastarih=:bastarih,
+		icerik_bittarih=:bittarih,
+		icerik_otarih=:otarih,
+		icerik_yer=:yer,
+		icerik_komite=:komite,
+		icerik_konular=:konular,
+		icerik_ozel=:ozel,
+		icerik_surec=:surec,
+		icerik_keyword=:keyword,
+		icerik_durum=:durum,
+		icerik_resimyol=:resimyol,
+		icerik_zaman=:zaman
 			WHERE icerik_id={$_POST['icerik_id']}");
 		$update=$kaydet->execute(array(
 			'ad' => $_POST['icerik_ad'],
 			'detay' => $_POST['icerik_detay'],
-			'keyword' => $_POST['icerik_keyword'],
-			'durum' => $_POST['icerik_durum'],
+			'konusmacilar' => $_POST['icerik_konusmacilar'],
 			'katilim' => $_POST['icerik_katilim'],
 			'duzenleyen' => $_POST['icerik_duzenleyen'],
-			'konusmacilar' => $_POST['icerik_konusmacilar'],
 			'bastarih' => $_POST['icerik_bastarih'],
 			'bittarih' => $_POST['icerik_bittarih'],
 			'otarih' => $_POST['icerik_otarih'],
@@ -608,7 +605,9 @@ if (isset($_POST['icerikduzenle'])) {
 			'konular' => $_POST['icerik_konular'],
 			'ozel' => $_POST['icerik_ozel'],
 			'surec' => $_POST['icerik_surec'],
-			'mail' => $_POST['icerik_mail'],
+			'keyword' => $_POST['icerik_keyword'],
+			'durum' => $_POST['icerik_durum'],
+			'resimyol' => $refimgyol,
 			'zaman' => $zaman
 		));
 
@@ -798,28 +797,25 @@ if (isset($_POST['dergiduzenle'])) {
 		$refimgyol=substr($uploads_dir, 6)."/".$benzersizad.$name;
 		@move_uploaded_file($tmp_name, "$uploads_dir/$benzersizad$name");
 
-		$tarih=$_POST['dergi_tarih'];
-		$saat=$_POST['dergi_saat'];
-		$zaman = $tarih." ".$saat;
 
 
 		$kaydet=$db->prepare("UPDATE dergi SET
-			dergi_ad=:ad,
-			dergi_issn=:issn,
-			dergi_periyot=:periyot,
-			dergi_baslangic=:baslangic,
-			dergi_yayinci=:yayinci,
-			dergi_detay=:detay,
-			dergi_editorkurul=:editorkurul,
-			dergi_yazimkurallari=:yazimkurallari,
-			dergi_amackapsam=:amackapsam,
-			dergi_yayinilkeleri=:yayinilkeleri,
-			dergi_eissn=:eissn,
-			dergi_dizinler=:dizinler,
-			dergi_iletisim=:iletisim,
-			dergi_durum=:durum,
-			dergi_resimyol=:resimyol,
-			dergi_zaman=:zaman
+		dergi_ad=:ad,
+		dergi_issn=:issn,
+		dergi_periyot=:periyot,
+		dergi_baslangic=:baslangic,
+		dergi_yayinci=:yayinci,
+		dergi_detay=:detay,
+		dergi_editorkurul=:editorkurul,
+		dergi_yazimkurallari=:yazimkurallari,
+		dergi_amackapsam=:amackapsam,
+		dergi_yayinilkeleri=:yayinilkeleri,
+		dergi_eissn=:eissn,
+		dergi_dizinler=:dizinler,
+		dergi_iletisim=:iletisim,
+		dergi_durum=:durum,
+		dergi_resimyol=:resimyol,
+		dergi_zaman=:zaman
 			WHERE dergi_id={$_POST['dergi_id']}");
 		$update=$kaydet->execute(array(
 			'ad' => $_POST['dergi_ad'],
@@ -883,20 +879,21 @@ if (isset($_POST['dergiduzenle'])) {
 			WHERE dergi_id={$_POST['dergi_id']}");
 		$update=$kaydet->execute(array(
 			'ad' => $_POST['dergi_ad'],
-			'issn' => $_POST['dergi_issn'],
-			'periyot' => $_POST['dergi_periyot'],
-			'baslangic' => $_POST['dergi_baslangic'],
-			'yayinci' => $_POST['dergi_yayinci'],
-			'detay' => $_POST['dergi_detay'],
-			'editorkurul' => $_POST['dergi_editorkurul'],
-			'yazimkurallari' => $_POST['dergi_yazimkurallari'],
-			'amackapsam' => $_POST['dergi_amackapsam'],
-			'yayinilkeleri' => $_POST['dergi_yayinilkeleri'],
-			'eissn' => $_POST['dergi_eissn'],
-			'dizinler' => $_POST['dergi_dizinler'],
-			'iletisim' => $_POST['dergi_iletisim'],
-			'durum' => $_POST['dergi_durum'],
-			'zaman' => $zaman
+		'issn' => $_POST['dergi_issn'],
+		'periyot' => $_POST['dergi_periyot'],
+		'baslangic' => $_POST['dergi_baslangic'],
+		'yayinci' => $_POST['dergi_yayinci'],
+		'detay' => $_POST['dergi_detay'],
+		'editorkurul' => $_POST['dergi_editorkurul'],
+		'yazimkurallari' => $_POST['dergi_yazimkurallari'],
+		'amackapsam' => $_POST['dergi_amackapsam'],
+		'yayinilkeleri' => $_POST['dergi_yayinilkeleri'],
+		'eissn' => $_POST['dergi_eissn'],
+		'dizinler' => $_POST['dergi_dizinler'],
+		'iletisim' => $_POST['dergi_iletisim'],
+		'durum' => $_POST['dergi_durum'],
+		'resimyol' => $resimgyol,
+		'zaman' => $zaman
 		));
 
 
@@ -976,6 +973,17 @@ if (isset($_POST['menukaydet'])) {
 if (isset($_POST['makalekaydet'])) {
 
 
+	
+	$uploads_dir = '../../dimg/makale';
+	@$tmp_name = $_FILES['makale_resimyol']["tmp_name"];
+	@$name = $_FILES['makale_resimyol']["name"];
+	$benzersizsayi1=rand(20000,32000);
+	$benzersizsayi2=rand(20000,32000);
+	$benzersizsayi3=rand(20000,32000);
+	$benzersizsayi4=rand(20000,32000);
+	$benzersizad=$benzersizsayi1.$benzersizsayi2.$benzersizsayi3.$benzersizsayi4;
+	$refimgyol=substr($uploads_dir, 6)."/".$benzersizad.$name;
+	@move_uploaded_file($tmp_name, "$uploads_dir/$benzersizad$name");
 
 	
 	$kaydet=$db->prepare("INSERT INTO makale_arsive SET
@@ -986,7 +994,14 @@ if (isset($_POST['makalekaydet'])) {
 		
 		makale_ad=:ad,
 		makale_yazar=:yazar,
+		makale_ozet=:ozet,
 		makale_sayfasayi=:sayfasayi,
+		makale_keywords=:keywords,
+		makale_kaynakca=:kaynakca,
+		makale_tarih=:tarih,
+		makale_kaynak=:kaynak,
+	
+		makale_resimyol=:resimyol,
 		
 		makale_durum=:durum");
 	$insert=$kaydet->execute(array(
@@ -997,7 +1012,14 @@ if (isset($_POST['makalekaydet'])) {
 		
 		'ad' => $_POST['makale_ad'],
 		'yazar' => $_POST['makale_yazar'],
+		'ozet' => $_POST['makale_ozet'],
 		'sayfasayi' => $_POST['makale_sayfasayi'],
+		'keywords' => $_POST['makale_keywords'],
+		'kaynakca' => $_POST['makale_kaynakca'],
+		'tarih' => $_POST['makale_tarih'],
+		'kaynak' => $_POST['makale_kaynak'],
+		'resimyol' => $refimgyol,
+		
 		
 		'durum' => $_POST['makale_durum']
 	));
@@ -1013,7 +1035,111 @@ if (isset($_POST['makalekaydet'])) {
 
 }
 
+if (isset($_POST['makaleduzenle'])) {
 
+	if($_FILES['makale_resimyol']["size"] > 0)  { 
+
+	$uploads_dir = '../../dimg/makale';
+	@$tmp_name = $_FILES['makale_resimyol']["tmp_name"];
+	@$name = $_FILES['makale_resimyol']["name"];
+	$benzersizsayi1=rand(20000,32000);
+	$benzersizsayi2=rand(20000,32000);
+	$benzersizsayi3=rand(20000,32000);
+	$benzersizsayi4=rand(20000,32000);
+	$benzersizad=$benzersizsayi1.$benzersizsayi2.$benzersizsayi3.$benzersizsayi4;
+	$refimgyol=substr($uploads_dir, 6)."/".$benzersizad.$name;
+	@move_uploaded_file($tmp_name, "$uploads_dir/$benzersizad$name");
+
+		$kaydet=$db->prepare("UPDATE makale_arsive SET
+	    	
+			dergi_id=:dergi_id,
+		dergi_cilt=:dergi_cilt,
+		dergi_yil=:dergi_yil,
+		dergi_sayi=:dergi_sayi,
+			makale_ad=:ad
+			WHERE id={$_POST['id']}");
+		$update=$kaydet->execute(array(
+			'dergi_id'=> $_POST['dergi_id'],
+			'dergi_cilt'=> $_POST['dergi_cilt'],
+			'dergi_yil'=> $_POST['dergi_yil'],
+			'dergi_sayi'=> $_POST['dergi_sayi'],
+			
+			'ad' => $_POST['makale_ad']
+		));
+
+
+		$id=$_POST['id'];
+
+		if ($update) {
+
+			
+
+			Header("Location:../production/makale-duzenle.php?id=$id&durum=ok");
+
+		} else {
+
+			Header("Location:../production/makale-duzenle.php?durum=no");
+		}
+
+
+}
+else {
+
+
+
+	$kaydet=$db->prepare("UPDATE makale_arsive SET
+		
+		dergi_id=:dergi_id,
+		dergi_cilt=:dergi_cilt,
+		dergi_yil=:dergi_yil,
+		dergi_sayi=:dergi_sayi,
+		makale_ad=:ad
+			WHERE id={$_POST['id']}");
+	$update=$kaydet->execute(array(
+		'dergi_id'=> $_POST['dergi_id'],
+		'dergi_cilt'=> $_POST['dergi_cilt'],
+		'dergi_yil'=> $_POST['dergi_yil'],
+		'dergi_sayi'=> $_POST['dergi_sayi'],
+		
+		'ad' => $_POST['makale_ad']
+
+	));
+
+
+	$dergi_id=$_POST['dergi_id'];
+
+	if ($update) {
+
+		Header("Location:../production/makale-duzenle.php?id=id&durum=ok");
+
+	} else {
+
+		Header("Location:../production/makale-duzenle.php?durum=no");
+	}
+
+	
+
+}
+
+}
+
+if ($_GET['makalesil']=="ok") {
+	
+	$sil=$db->prepare("DELETE from makale_arsive where id=:id");
+	$kontrol=$sil->execute(array(
+		'id' => $_GET['id']
+	));
+
+	if ($kontrol) {
+
+		Header("Location:../production/makale.php?durum=ok");
+
+	} else {
+
+		Header("Location:../production/makale.php?durum=no");
+	}
+
+}
 
 
 if (isset($_POST['menuduzenle'])) {

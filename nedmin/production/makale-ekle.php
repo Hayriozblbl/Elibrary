@@ -58,7 +58,7 @@ include '../netting/baglan.php';
 
               <div class="x_content">
 
-                <form action="../netting/islem.php" method="POST" id="demo-form2" data-parsley-validate class="form-horizontal form-label-left">
+                <form action="../netting/islem.php" method="POST"  enctype="multipart/form-data" id="demo-form2" data-parsley-validate class="form-horizontal form-label-left">
 
 
                   <div class="form-group">
@@ -133,7 +133,7 @@ include '../netting/baglan.php';
                             <select class="select2_single form-control" required="" name="dergi_sayi" tabindex="-1">
                         <option> </option>
 
-                        <option value="0"> Dergi Cilt</option>
+                        <option value="0"> Dergi Sayı</option>
 
                         <?php 
                      
@@ -161,7 +161,7 @@ include '../netting/baglan.php';
                       <label class="control-label col-md-2 col-sm-2 col-xs-12" for="first-name">Makele Ad<span class="required">*</span>
                       </label>
                       <div class="col-md-9 col-sm-9 col-xs-12">
-                        <input type="text" id="first-name" required="required" name="makale_ad" placeholder="Menü adını giriniz..." class="form-control col-md-7 col-xs-12">
+                        <input type="text" id="first-name" required="required" name="makale_ad" placeholder="Makale adını giriniz..." class="form-control col-md-7 col-xs-12">
                       </div>
                     </div>
 
@@ -172,21 +172,70 @@ include '../netting/baglan.php';
                         <input type="text" id="first-name"  name="makale_yazar" placeholder="Yazarları giriniz." class="form-control col-md-7 col-xs-12">
                       </div>
                     </div>
-
                     <div class="form-group">
-                      <label class="control-label col-md-2 col-sm-2 col-xs-12" for="first-name">Makele Sayfa Sayısı <span class="required">*</span>
+                      <label class="control-label col-md-2 col-sm-2 col-xs-12" for="first-name">Makele Sayfa Sayısı<span class="required">*</span>
                       </label>
                       <div class="col-md-9 col-sm-9 col-xs-12">
-
-                        <textarea  class="ckeditor" id="editor1" name="makale_sayfasayi"></textarea>
-
+                        <input type="text" id="first-name"  name="makale_sayfasayi" placeholder="Sayfa Sayısını." class="form-control col-md-7 col-xs-12">
                       </div>
                     </div>
 
+                    <div class="form-group">
+                      <label class="control-label col-md-2 col-sm-2 col-xs-12" for="first-name">Makele Özet <span class="required">*</span>
+                      </label>
+                      <div class="col-md-9 col-sm-9 col-xs-12">
+
+                        <textarea  class="ckeditor" id="editor4" name="makale_ozet"></textarea>
+
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="control-label col-md-2 col-sm-2 col-xs-12" for="first-name">Makele Anahtar Kelime <span class="required">*</span>
+                      </label>
+                      <div class="col-md-9 col-sm-9 col-xs-12">
+
+                        <textarea  class="ckeditor" id="editor1" name="makale_keywords"></textarea>
+
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="control-label col-md-2 col-sm-2 col-xs-12" for="first-name">Kaynakça <span class="required">*</span>
+                      </label>
+                      <div class="col-md-9 col-sm-9 col-xs-12">
+
+                        <textarea  class="ckeditor" id="editor2" name="makale_kaynakca"></textarea>
+
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label class="control-label col-md-2 col-sm-2 col-xs-12" for="first-name">Yayımlanma Tarihi<span class="required">*</span>
+                      </label>
+                      <div class="col-md-9 col-sm-9 col-xs-12">
+                        <input type="text" id="first-name"  name="makale_tarih" placeholder="Yayımlama tarihini 01.02.2015 şeklinde giriniz." class="form-control col-md-7 col-xs-12">
+                      </div>
+                    </div>
+
+                    <div class="form-group">
+                      <label class="control-label col-md-2 col-sm-2 col-xs-12" for="first-name">Kaynak Göster <span class="required">*</span>
+                      </label>
+                      <div class="col-md-9 col-sm-9 col-xs-12">
+
+                        <textarea  class="ckeditor" id="editor3" name="makale_kaynak"></textarea>
+
+                      </div>
+                    </div>
+                    
+                    <div class="form-group">
+                    <label class="control-label col-md-2 col-sm-2 col-xs-12" for="first-name">Pdf Yükle
+                    </label>
+                    <div class="col-md-3 col-sm-3 col-xs-12">
+                      <input type="file" id="first-name" required="required" name="makale_resimyol"  class="form-control col-md-7 col-xs-12">
+                    </div>
+                  </div>
                     <script type="text/javascript">
 
 
-                     CKEDITOR.replace( 'editor1',
+                     CKEDITOR.replace( 'editor1''editor''editor3''editor4',
                      {
                       filebrowserBrowseUrl : 'ckfinder/ckfinder.html',
                       filebrowserImageBrowseUrl : 'ckfinder/ckfinder.html?type=Images',

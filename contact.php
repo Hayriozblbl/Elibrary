@@ -1,4 +1,14 @@
-<?php include'header.php'; ?>
+<?php 
+include'header.php'; 
+
+include '../netting/baglan.php';
+$hakkimizdasor=$db->prepare("select * from ayar where ayar_id=?");
+$hakkimizdasor->execute(array(0));
+$hakkimizdacek=$hakkimizdasor->fetch(PDO::FETCH_ASSOC);
+
+?>
+
+
 
         <!-- Start: Page Banner -->
         <section class="page-banner services-banner">
@@ -34,9 +44,7 @@
                                             <div class="bottom-info">
                                                 <span class="top-arrow"></span>
                                                 <ul>
-                                                    <li>121 King Street, Melbourne </li>
-                                                    <li>Victoria 3000 Australia</li>
-                                                    <li>PO Box 16122</li>
+                                                    <li><?php echo $hakkimizdacek['ayar_adres']; ?></li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -44,9 +52,7 @@
                                             <div class="bottom-info orange-bg">
                                                 <span class="bottom-arrow"></span>
                                                 <ul>
-                                                    <li>121 King Street, Melbourne </li>
-                                                    <li>Victoria 3000 Australia</li>
-                                                    <li>PO Box 16122</li>
+                                                <li><?php echo $hakkimizdacek['ayar_adres']; ?></li>
                                                 </ul>
                                             </div>
                                             <div class="top-info dark-bg">
@@ -62,9 +68,8 @@
                                             <div class="bottom-info">
                                                 <span class="top-arrow"></span>
                                                 <ul>
-                                                    <li><a href="tel:+123-456-7890">Local: +123-456-7890</a></li>
-                                                    <li><a href="tel:+123-456-7890">Local: +123-456-7890</a></li>
-                                                    <li><a href="fax:(001)-254-7359">Fax: (001)-254-7359</a></li>
+                                                    <li><?php echo $hakkimizdacek['ayar_tel']; ?></li>
+                                                    <li><?php echo $hakkimizdacek['ayar_fax']; ?></li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -72,9 +77,8 @@
                                             <div class="bottom-info orange-bg">
                                                 <span class="bottom-arrow"></span>
                                                 <ul>
-                                                    <li><a href="tel:+123-456-7890">Local: +123-456-7890</a></li>
-                                                    <li><a href="tel:+123-456-7890">Local: +123-456-7890</a></li>
-                                                    <li><a href="fax:(001)-254-7359">Fax: (001)-254-7359</a></li>
+                                                <li><?php echo $hakkimizdacek['ayar_tel']; ?></li>
+                                                    <li><?php echo $hakkimizdacek['ayar_fax']; ?></li>
                                                 </ul>
                                             </div>
                                             <div class="top-info dark-bg">
@@ -90,9 +94,8 @@
                                             <div class="bottom-info">
                                                 <span class="top-arrow"></span>
                                                 <ul>
-                                                    <li>www.libraria.com</li>
-                                                    <li>support@libraria.com</li>
-                                                    <li>info@libraria.com</li>
+                                                <li><?php echo $hakkimizdacek['ayar_mail']; ?></li>
+                                              
                                                 </ul>
                                             </div>
                                         </div>
@@ -100,9 +103,8 @@
                                             <div class="bottom-info orange-bg">
                                                 <span class="bottom-arrow"></span>
                                                 <ul>
-                                                    <li><a href="http://www.libraria.com/">www.libraria.com </a></li>
-                                                    <li><a href="mailto:support@libraria.com">support@libraria.com</a></li>
-                                                    <li><a href="mailto:info@libraria.com">info@libraria.com</a></li>
+                                                <li><?php echo $hakkimizdacek['ayar_mail']; ?></li>
+                                             
                                                 </ul>
                                             </div>
                                             <div class="top-info dark-bg">
@@ -115,7 +117,7 @@
                                 <div class="row">
                                     <div class="contact-area">
                                         <div class="container">
-                                            <div class="col-md-5 col-md-offset-1 border-gray-left">
+                                          <!--  <div class="col-md-5 col-md-offset-1 border-gray-left">
                                                 <div class="row">
                                                     <div class="col-md-12">
                                                         <div class="contact-map bg-light margin-left">
@@ -123,8 +125,8 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                            </div>
-                                            <div class="col-md-5 border-gray-right">
+                                            </div>   -->
+                                            <div class="col-md-9 col-md-9 border-gray-right">
                                                 <div class="row">
                                                     <div class="col-md-12">
                                                         <div class="contact-form bg-light margin-right">

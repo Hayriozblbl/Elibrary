@@ -55,7 +55,13 @@ include '../netting/baglan.php';
 
                 <form action="../netting/islem.php" method="POST" enctype="multipart/form-data" id="demo-form2" data-parsley-validate class="form-horizontal form-label-left">
 
-                 
+                  <div class="form-group">
+                    <label class="control-label col-md-2 col-sm-2 col-xs-12" for="first-name">Resim Seç
+                    </label>
+                    <div class="col-md-3 col-sm-3 col-xs-12">
+                      <input type="file" id="first-name" required="required" name="icerik_resimyol"  class="form-control col-md-7 col-xs-12">
+                    </div>
+                  </div>
 
                   <div class="form-group">
                     <label class="control-label col-md-2 col-sm-2 col-xs-12" for="first-name">Eklenme Tarihi<span class="required">*</span>
@@ -80,6 +86,14 @@ include '../netting/baglan.php';
                     </div>
                   </div>
 
+                     <div class="form-group">
+                    <label class="control-label col-md-2 col-sm-2 col-xs-12" for="first-name">Konferans Tarih<span class="required">*</span>
+                    </label>
+                    <div class="col-md-9 col-sm-9 col-xs-12">
+                      <input type="date" id="first-name" required="required" value="<?php echo $zaman[0]; ?>" name="icerik_bastarih" class="form-control col-md-7 col-xs-12">
+                         <input type="date" id="first-name" required="required" value="<?php echo $zaman[0]; ?>" name="icerik_bittarih" class="form-control col-md-7 col-xs-12">
+                    </div>
+                  </div>
 
 
                   <div class="form-group">

@@ -24,7 +24,7 @@ RewriteRule ^sitemap.xml$ sitemap.php [NC,L]
 
 
 RewriteRule ^journal/([0-9a-zA-Z-_]+)-([0-9]+)$ journal-detail.php?sef=$1&dergi_id=$2 [L,QSA]
-RewriteRule ^article/([0-9a-zA-Z-_]+)-([0-9]+)$ dergibymakale.php?sef=$1&dergiarsivecek_id=$2 [L,QSA]
+RewriteRule ^article/([0-9a-zA-Z-_]+)-([0-9]+)$ dergibymakale.php?sef=$1&makalearsivecek_id=$2 [L,QSA]
 RewriteRule ^sayfa-([0-9a-zA-Z-_]+)-([0-9]+)$  menu-detay.php?sef=$1&menu_id=$2 [L,QSA]
 RewriteRule ^journal/([0-9a-zA-Z-_]+)-([0-9]+)$  journal-detail.php?sef=$1&dergi_id=$2 [L,QSA]
 RewriteRule ^conference/([0-9a-zA-Z-_]+)-([0-9]+)$ conference-details.php?sef=$1&icerik_id=$2 [L,QSA]

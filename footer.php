@@ -34,12 +34,10 @@
                                 <span class="underline left"></span>
                                 <div class="menu-quick-links-right">
                                     <ul id="menu-quick-links" class="menu">
-                                        <li><a href="#">Library News</a></li>
-                                        <li><a href="#">History</a></li>
-                                        <li><a href="#">Meet Our Staff</a></li>
-                                        <li><a href="#">Board of Trustees</a></li>
-                                        <li><a href="#">Budget</a></li>
-                                        <li><a href="#">Annual Report</a></li>
+                                    <li><a href="index.php">Home</a></li>
+                                <li><a href="journal-list.php">Journal</a></li>
+                                    <li><a href="conference.php">Conference</a></li>
+                                <li><a href="contact.php">Contact</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -57,11 +55,10 @@
                         </div>
                         <div class="col-md-9 pull-right">
                             <ul>
-                                <li><a href="index.php">Home</a></li>
-                                <li><a href="article-list.php">Article</a></li>
+                                <<li><a href="index.php">Home</a></li>
                                 <li><a href="journal-list.php">Journal</a></li>
-                                    <li><a href="conference-list.php">Conference</a></li>
-                                <li><a href="contact.html">Contact</a></li>
+                                    <li><a href="conference.php">Conference</a></li>
+                                <li><a href="contact.php">Contact</a></li>
                             </ul>
                         </div>
                     </div>

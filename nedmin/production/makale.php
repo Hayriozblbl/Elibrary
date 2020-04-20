@@ -141,9 +141,9 @@ include 'header.php';
 
                       ?></td>
 
-                      <td class="text-center"><a href="makale-duzenle.php?makale_id=<?php echo $makalecek['makale_id']; ?>"><button style="width:80px;" class="btn btn-primary btn-xs"><i class="fa fa-pencil" aria-hidden="true"></i> Düzenle</button></a></td>
+                      <td class="text-center"><a href="makale-duzenle.php?id=<?php echo $makalecek['id']; ?>"><button style="width:80px;" class="btn btn-primary btn-xs"><i class="fa fa-pencil" aria-hidden="true"></i> Görüntüle</button></a></td>
 
-                      <td class="text-center"><a href="../netting/islem.php?makalesil=ok&makale_id=<?php echo $makalecek['makale_id']; ?>&makale_resimyol=<?php echo $makalecek['makale_resimyol']; ?>"><button style="width:80px;" class="btn btn-danger btn-xs"><i class="fa fa-pencil" aria-hidden="true"></i> Sil</button></a></td>
+                      <td class="text-center"><a href="../netting/islem.php?makalesil=ok&id=<?php echo $makalecek['id']; ?>"><button style="width:80px;" class="btn btn-danger btn-xs"><i class="fa fa-pencil" aria-hidden="true"></i> Sil</button></a></td>
 
                     </tr>
 

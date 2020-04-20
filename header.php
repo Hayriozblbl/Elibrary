@@ -19,7 +19,7 @@ $hakkimizdacek=$hakkimizdasor->fetch(PDO::FETCH_ASSOC);
  ?>
 
 
-<base href="http://localhost/elib/">
+<base href="http://localhost/E-library/">
 <!DOCTYPE html>
 <html lang="En">
     
@@ -90,7 +90,7 @@ $hakkimizdacek=$hakkimizdasor->fetch(PDO::FETCH_ASSOC);
                                     <div class="navbar-brand">
                                         <h1>
                                             <a href="index.php">
-                                                <img src="<?php echo $ayarcek['ayar_logo']; ?>" alt="<?php echo $ayarcek['ayar_title']; ?>" />
+                                                <img src="<?php echo $ayarcek['ayar_logo']; ?>" width="250" height="250" alt="<?php echo $ayarcek['ayar_title']; ?>" />
                                             </a>
                                         </h1>
                                     </div>
@@ -166,11 +166,15 @@ $hakkimizdacek=$hakkimizdasor->fetch(PDO::FETCH_ASSOC);
                             <a href="#mobile-menu"><i class="fa fa-navicon"></i></a>
                             <div id="mobile-menu">
                                    <ul class="nav navbar-nav">
+                                   <li class="mobile-title">
+                                        <h4>MENU</h4>
+                                        <a href="#" class="close"></a>
+                                    </li>
                                         <li class="dropdown active">
-                                            <a data-toggle="dropdown" class="dropdown-toggle disabled" href="index.php">Home</a>
+                                            <a href="index.php">Home</a>
                                             
                                         </li>
-                                         <li><a href="article-list.php">article</a></li>
+                                        <!-- <li><a href="article-list.php">article</a></li> -->
                                      
                                          <li><a href="journal-list.php">Journal</a></li>
                                                <li><a href="conference.php">Conference</a></li>

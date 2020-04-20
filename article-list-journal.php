@@ -58,38 +58,37 @@
                              <ul class="list-group">
 
                                 <li class="list-group-item list-group-item-primary">
-                                    <i class="fa fa-globe"></i> Articles
+                                 <h5 class="fa fa-globe"> <b> Articles</b> </h5>
 
                                     <ul class="list-group">
-                                       <?php   
+                                    <?php   
                                        $makalesor=$db->prepare("SELECT * from makale_arsive where dergi_id=:dergi_id and dergi_yil=:dergi_yil and dergi_cilt=:dergi_cilt and dergi_sayi=:dergi_sayi");
                                        $makalesor->execute($para);
 
 
                                        while($makalecek=$makalesor->fetch(PDO::FETCH_ASSOC)) { ?>
                                         <li class="list-group-item list-group-item-default">
-                                           <a class="fa fa-file-text" href="articles/<?=seo($makalecek["makale_ad"]).'-'.$makalecek["id"]?>">&nbsp;&nbsp;<?php echo $makalecek['makale_ad']; ?></a>
+                                           <a  href="articles/<?=seo($makalecek["makale_ad"]).'-'.$makalecek["id"]?>?dergi_id=<?php echo  $makalecek["dergi_id"]; ?>&dergi_yil=<?php echo $makalecek["dergi_yil"]; ?>&dergi_cilt=<?php echo $makalecek["dergi_cilt"]; ?>&dergi_sayi=<?php echo $makalecek["dergi_sayi"]; ?>">
+                                           &nbsp;&nbsp;<h5 class="fa fa-file-text"> &nbsp;<?php echo $makalecek['makale_ad']; ?> </h5></a>
 
-                                           / <small>Page
-                                            : <?php echo $makalecek['makale_sayfasayi']; ?></small>
-                                            <div class="pull-right">
-                                                <a href="/tr/download/article-file/681474"
-                                                target="_blank">
-                                                PDF
-                                            </a>
-                                        </div>
+                                            
+                                           <div class="pull-right">
+                                            
+                                            <a class="btn btn-dark-gray" href="<?php echo $makalecek['makale_resimyol']; ?>">PDF</a>
+                                        </div> 
+                                     
                                         <br>
-                                        <span>
-                                            <?php echo $makalecek['makale_yazar']; ?>                                                                                                   </span>
+                                        <p><b> Author:   </b>  <?php echo $makalecek['makale_yazar']; ?>        </p>
+                                        
+                                                                                                                                     
                                         </li>
 
 
 
 
+                                        <?php } ?>
 
 
-
-                                    <?php } ?>
 
 
 
@@ -98,7 +97,7 @@
 
 
                         </ul>
-                        <button type="button" class="btn btn-primary">Download PDF</button> <br> <br>
+                       <!-- <button type="button" class="btn btn-primary">Download PDF</button> --> <br> <br>
 
                     </div>
                 </div>
